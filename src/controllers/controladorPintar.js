@@ -31,6 +31,11 @@ export function pintarProductos(productos){
         precio.classList.add("fw-bold")
         precio.textContent="$"+producto.precio
 
+        // 2.6 creamos descripcio
+         let descripcion = document.createElement('p')
+         descripcion.classList.add("d-none")
+         descripcion.textContent = producto.descripcion
+
         //DETECCION DE MOUSE
         columna.addEventListener("mouseover",function(evento){
             foto.src=producto.fotos[1]
@@ -44,6 +49,7 @@ export function pintarProductos(productos){
         tarjeta.appendChild(foto)
         tarjeta.appendChild(nombre)
         tarjeta.appendChild(precio)
+        tarjeta.appendChild(descripcion)
 
         columna.appendChild(tarjeta)
 
