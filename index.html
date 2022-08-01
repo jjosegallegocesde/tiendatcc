@@ -37,10 +37,7 @@
                     <a class="nav-link" href="./src/views/ampliarInfo.html">Productos</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="./src/views/registro.html">Registro</a>
                   </li>
                 </ul>
               </div>
@@ -69,7 +66,7 @@
                         <h4 class="mt-4">Registrate con nosotros</h4>
                         <button class="btn btn-primary mt-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
                             <i class="bi bi-box-arrow-in-right"></i>
-                            Registrate
+                            Ingreso
                         </button>
                     </div>
                     <div class="col-5">
@@ -103,28 +100,27 @@
         </section>
 
 
-
-
         <section>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ingreso</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
                   <div>
-                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+                    <form>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1"><i class="bi bi-key-fill"></i></span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Ingresar</button>
+                    </form>
                   </div>
-                  <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
-                      Dropdown button
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
+            
                 </div>
               </div>
         </section>

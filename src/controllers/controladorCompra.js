@@ -1,19 +1,19 @@
 console.log("hola estamos comprando")
-console.log(JSON.parse(localStorage.getItem('infoProducto')))
-let producto=JSON.parse(localStorage.getItem('infoProducto'))
+console.log(JSON.parse(sessionStorage.getItem('infoProducto')))
+let producto=JSON.parse(sessionStorage.getItem('infoProducto'))
 
 let carrito
 //REVISAR VERIFICAR SI HAY PRODUCTOS EN EL CARRITO
-if(JSON.parse(localStorage.getItem("carrito"))==null){
+if(JSON.parse(sessionStorage.getItem("carrito"))==null){
 
     //CREAMOS EL CARRITO DE COMPRAS
     carrito=[]
 
 }else{
-    carrito=JSON.parse(localStorage.getItem("carrito"))
+    carrito=JSON.parse(sessionStorage.getItem("carrito"))
 
 }
-console.log(JSON.parse(localStorage.getItem("carrito")))
+console.log(JSON.parse(sessionStorage.getItem("carrito")))
 
 //pintamos la foto desde el objeto del lcoalstorage
 let foto=document.getElementById("foto")
@@ -53,8 +53,13 @@ botonAgregar.addEventListener("click", function(evento){
     //agregando un producto al carrito de compras
     carrito.push(producto)
 
-    //almaceno el carrito en el localstorage
-    localStorage.setItem("carrito",JSON.stringify(carrito))
+    //almaceno el carrito en el sessionStorage
+    sessionStorage.setItem("carrito",JSON.stringify(carrito))
+
+    //RECORRIENDO UN ARREGLO
+    carrito.forEach(function(producto){
+        console.log(producto.cantidad)
+    })
 
     
 

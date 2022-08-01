@@ -1,7 +1,7 @@
 import{pintarResumenCompra} from './controladorPintarResumen.js'
 
 //accedemos a la variable local del carrito
-let carrito=JSON.parse(localStorage.getItem('carrito'))
+let carrito=JSON.parse(sessionStorage.getItem('carrito'))
 
 //comparo o pregunto si el carrito esta vacio
 if(carrito==null){
@@ -18,7 +18,7 @@ if(carrito==null){
 //RUTINA PARA LIMPIAR EL RESUMEN DE LA COMPRA
 let botonLimpiar=document.getElementById("botonLimpiar")
 botonLimpiar.addEventListener("click",function(evento){
-    localStorage.removeItem("carrito")
+    sessionStorage.removeItem("carrito")
 
     let contenedor=document.getElementById("contenedor")
     contenedor.innerHTML=""

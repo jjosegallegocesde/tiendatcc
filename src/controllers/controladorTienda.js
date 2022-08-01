@@ -18,9 +18,9 @@ contenedor.addEventListener("click",function(evento){
     let producto  =  ampliarInfoProducto(evento)
     console.log(producto)
    
-    //ALMACENAR EN EL LOCALSTORAGE LA INFORMACION DEL PRODUCTO SELECCIONADO
-    localStorage.setItem('infoProducto',JSON.stringify(producto))
-    console.log(localStorage.getItem('infoProducto'))
+    //ALMACENAR EN EL sessionStorage LA INFORMACION DEL PRODUCTO SELECCIONADO
+    sessionStorage.setItem('infoProducto',JSON.stringify(producto))
+    console.log(sessionStorage.getItem('infoProducto'))
 
     //abro nueva ventana
     window.location.href="./src/views/ampliarInfo.html"
